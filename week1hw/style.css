@@ -1,0 +1,25 @@
+/* css style sheet week0*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    font-style: lobster;
+    background-color: moccasin;
+}
+h1 {
+    text-align: center;
+    text-decoration: none;
+    color: moccasin;
+    font-size: 1.7rem;
+    font-style: cursive;
+}
+ul {
+    min-height: 10vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    
+}
