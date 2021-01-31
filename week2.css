@@ -8,7 +8,7 @@ header{
     font-style: lobster;
     background-color: moccasin;
 }
-h1 {width: 100%;
+h1 {width: 700%;
     text-align: center;
     text-decoration: none;
     color: moccasin;
@@ -43,12 +43,7 @@ a {
     text-decoration: none;
 }
 a:hover {text-decoration: underline;}
-img {width: "200px";
-    height: "200px";
-text-align: center;
-margin: 0 auto;
-display: block;
-}
+
 {
     box-sizing: border-box;
   }
@@ -66,5 +61,9 @@ display: block;
       width: 50%;
       border: 15px solid gray;
     padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+    height: 300px; 
+  }
+  footer {
+      background-color: rgb(241, 179, 158);
+      height: 10%;
   }
