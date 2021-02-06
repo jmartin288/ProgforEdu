@@ -63,6 +63,7 @@ a:hover {text-decoration: underline;}
     padding: 10px;
     height: 300px; 
   }
+  p {font-family: Verdana, Geneva, Tahoma, sans-serif;}
   footer {
       background-color: rgb(241, 179, 158);
       height: 10%;
