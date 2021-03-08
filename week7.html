@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>My Pets</title>
+	<meta charset="utf-8">
+    <script type = "text/javascript">
+    function pet (name, species, breed, color, weight, age){
+                    
+            this.name = name; 
+                  this.species = species;
+                 this.breed = breed;
+                 this.color = color;
+                 this.weight = weight;
+                  this.age = age;
+                        
+                
+    this.writePet = function () {
+                	var str = this.name + " " + this.species + " " + this.breed + " " + 
+                    this.color + " " + this.weight + " " + this.age;
+                  writeText(str, "textAge");                                             
+   							    }
+                  };
+
+                  function writeText(txt, destination){
+                    document.getElementById(destination).innerHTML=txt;
+                    } 
+   //Sends pets properties to be printed onclick
+                       function petName(pet, destination) {
+                        var description = " This is " + pet.name + " its a " + pet.species + " of the breed " + pet.breed + ", color " + 
+                    pet.color + " its weight is " + pet.weight + "lb and it is " + pet.age +" years old.";
+                    document.getElementById(destination).innerHTML=description;
+                    }
+//List of each pets properties
+      var pet1 = new pet("Romeo", "Canine", "Chihuahua", "Golden Blonde", 4, 5); 
+      var pet2 = new pet("Reece", "Canine", "American Eskimo","White", 15, 8);                                                                                 	
+      var pet3 = new pet("Catalina", "Feline", "Domestic Long Hair", "Orange Tabby", 8.8, 7);         
+      var pet4 = new pet("Gloria", "Feline", "Domestic Short Hair", "Grey", 6.6, 8);  
+
+    </script>
+</head>                  
+<body style="background-color: rgb(138, 219, 230);"> 
+  <!--text,list,and images-->                                
+	<h1 align="center">My Pets</h1>
+  <h3 align="center">Meet my Pets</h3>
+  <div class="navbar"> <ul><a href="../week0hw/index.html">Home</a></ul><ul></ul><a href="../week0hw/index.html">Week 0</a></ul>
+    <ul><a href="../week1.html">Week 1</a></ul>
+    <ul><a href="https://jmartin288.github.io/ProgforEdu/week2.html">Week 2</a></ul>
+    <ul><a href="https://jmartin288.github.io/ProgforEdu/week3.html">Week 3</a></ul>
+    <ul><a href="https://jmartin288.github.io/ProgforEdu/week4.html">Week 4</a></ul>
+    <ul><a href="https://jmartin288.github.io/ProgforEdu/week5.html">Week 5</a></ul>
+    <ul><a href="week6">Week 7</a></ul></nav></h1></div>
+ 
+              
+  <style>
+    .navbar{
+    font-size: 20px;
+    color: darkgray;
+justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+}
+.navbar ul {
+    color: darkgray;
+    list-style-type: none;
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+justify-content: space-around;
+display: flex;
+}
+
+a { 
+    color: rgb(124, 122, 122);
+    text-decoration: none;
+}
+a:hover {text-decoration: underline;}
+img {width: "200px";
+    height: "200px";
+text-align: center;
+margin: 0 auto;
+display: block;
+}
+p { 
+    text-indent: 10px;
+  text-align: center;}
+    .button { background-color: white;
+             color: black;
+             border: 2px solid #D6E5C4;
+                    }  
+ </style>
+            <input type="button" value = "Meet Romeo" onclick= "petName(pet1, 'textArea2',);" 
+            name="write pet1"/>
+         
+            <input type="button" value = "Meet Reece" onclick= "petName(pet2, 'textArea2');" 
+            name="write pet2"/>
+          
+          
+          <input type="button" value = "Meet Catalina" 
+          onclick= "petName(pet3,'textArea2');" name="write pet3"/>
+          
+          <input type="button" value = "Meet Gloria" onclick= 
+          "petName(pet4,'textArea2');" name="write pet4"/>
+          
+                                                                                                                                   
+           
+                  <!-- Added photos -->                                                                                                    
+         
+             <p id="textArea">  Pet Description: </p>
+                 <p id="textArea2">  Text goes here: </p>
+                <p><img src="cgsofa.jpg"  width="200">&nbsp;
+                 <img src="romeoreece.png"  width="200">  </p>         
+            
+                                                                                                                                                                                                                                              
+         </body>
+         
+         
+         </html>
