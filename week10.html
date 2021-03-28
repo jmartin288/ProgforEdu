@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+    //want to code with music? Try this so much fun https://www.youtube.com/watch?v=vl_Ejt5LtFY
+    function gentext() {
+        var word=['Amor', 'Te amo', 'Te quiero','Me gustas','Mi Vida','Carino','Ducle','Media Naranja','Alma Gemela','Mamicita','Papi','Novio',];
+        var para=document.querySelector('p');
+        para.innerHTML=word[Math.floor(Math.random()*word.length)];
+    }
+</script>
+<style>
+* {
+  box-sizing: border-box;
+  
+}
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+.menu a {
+  font-family: comic sans;
+  background-color:#ebd0d0;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:black;
+  text-decoration: none;
+}
+a:hover {text-decoration: underline;}
+.main {
+
+  font-family: papyrus;
+  float:left;
+  width:60%;
+  padding:0 20px;
+}
+.right {
+  border-radius: 5%;
+  border-color: rgb(42, 56, 53);
+  background-color:#ebb8b8;
+  float:left;
+  width:20%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+  font-family: papyrus;
+}
+@media only screen and (min-device-width : 600px) and (max-device-width : 768px) {
+
+/* Tablet mode- made .right move across the whole page */
+ .right {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width:100%;
+  }
+}
+</style>
+</head>
+<body style="font-family: cursive;color:#487e85;">
+
+<div style="background-color: rgb(238, 209, 160);padding:15px;text-align:center;">
+  <h1 style="font-family: brushscript; font-size: 40px;">Lingo Learning</h1>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="../ProgforEdu/week0hw/index.html">Week 0</a>
+    <a href="https://jmartin288.github.io/ProgforEdu/week1hw/index.html">Week 1</a>
+    <a href="https://jmartin288.github.io/ProgforEdu/week2.html">Week 2</a>
+    <a href="#">Week 3</a>
+  </div>
+
+  <div class="main">
+    <h2>About</h2>
+    <p>At Lingo Learning we believe learning a language can change your life. We support a global and stressfree way to learn and teach Spanish and English. Our teachers use fun activities and your personal interest to create innovative lessons.
+      Language acquisition techniques and natural methods are used, low stess and highly interactive fun.</p>
+      <button onclick="gentext();">generate Spanish Love Phrase</button>
+  </div>
+
+  <div class="right">
+    <h2>To know another language is to live another life.</h2>
+    <p>-Chinese Proveb</p>
+  </div>
+</div>
+
+<div style="background-color: rgb(245, 203, 149);text-align:center;padding:10px;margin-top:7px;">© copyright Jennifer Martin 2021</div>
+
+</body>
+</html>
