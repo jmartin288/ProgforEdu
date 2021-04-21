@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<html>
+
+
+<script type="text/javascript">
+
+/*
+ * Here is a function that users local storage across browser sessions to get the user's 
+ * name and greet them. This html5 local storage capability is supposed to be
+ * better than cookies.
+ */
+ function gentext() {
+         var word=['“Learning is a treasure that will follow its owner everywhere.” -', 'Change your language, change your thoughts', '“One who speaks only one language is one person, but one who speaks two languages is two people.” ','To learn a language is to have one more window from which to look at the world.',' You can never understand one language until you understand at least two.','The limits of my language are the limits of my world. ',];
+         var para=document.querySelector('h3');
+         para.innerHTML=word[Math.floor(Math.random()*word.length)];
+     }
+function welcomeBack()
+{
+if (typeof(Storage)!== "undefined") // is local storage undefined by browser
+    {
+     // browser supports local storage, so lets see if they've visited the web site before.
+    
+        // if haven't been here before, let's get your name
+	if ((typeof localStorage.userName == "undefined") || (localStorage.userName == null))
+		{
+        // writing to local storage for the first time
+		localStorage.userName = prompt("Welcome, what is your name?");        
+		}
+        
+     // either you just wrote it out, or you're coming.
+     // reading from local storage later
+  	document.getElementById("result").innerHTML = "Welcome  " + localStorage.userName;
+  	}
+	else
+  	 {
+  	 document.getElementById("result").innerHTML="Sorry, your browser does not support web storage... so I can not greet you by name.";
+  	 } 
+ 
+  /* supposedly alternate way to do local storage
+  localStorage.setItem('myKey', 'myValue');
+  var myVar = localStorage.getItem('myKey');
+  */
+}
+</script>
+
+<style>
+    * {
+      box-sizing: border-box;
+      
+    }
+   
+    .p {
+        background-color: burlywood;
+    }
+    .menu {
+      float:left;
+      width:20%;
+      text-align:center;
+    }
+    .menu a {
+      font-family: papyrus;
+      background-color:#dd9595;
+      padding:8px;
+      margin-top:7px;
+      display:block;
+      width:100%;
+      color:black;
+      text-decoration: none;
+    }
+    a:hover {text-decoration: underline;}
+    .main {
+        height: 300px;
+   text-align: center;
+      font-family: papyrus;
+      float:left;
+      width:60%;
+      padding:0 20px;
+    }
+    .right {
+      border-radius: 5%;
+      border-color: rgb(74, 112, 104);
+      background-color:#e9a5a5;
+      float:left;
+      width:20%;
+      padding:15px;
+      margin-top:7px;
+      text-align:center;
+      font-family: papyrus;
+    }
+    @media only screen and (min-device-width : 600px) and (max-device-width : 700px) {
+    
+    /* Tablet mode- made .right move across the whole page */
+     .right {
+        width: 100%;
+      }
+    }
+    
+    @media only screen and (max-width:620px) {
+      /* For mobile phones: */
+      .menu, .main, .right {
+        width:100%;
+      }
+    }
+    </style>
+</head>
+<body style="font-family: cursive;color:#487e85;">
+
+<div style="background-color: rgb(238, 209, 160);padding:15px;text-align:center;">
+ 
+  <h1 style="font-family: papyrus; font-size: 30px;">Lingo Learning </h1>&nbsp;<img src= "Lotus.jpg" width="70" height="50"/>
+  <h2>Adult Literacy and English</h2>
+
+</div>
+
+
+<body onload="welcomeBack()">
+<div id="result"></div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="../ProgforEdu/week0hw/index.html">Link 1</a>
+    <a href="https://jmartin288.github.io/ProgforEdu/week1hw/index.html">Link 2</a>
+    <a href="https://jmartin288.github.io/ProgforEdu/week2.html">Link 3</a>
+    <a href="contact.html">Schedule a lesson</a>
+  </div>
+
+  <div class="main">
+    <h2>First Basic Phonics Course</h2>
+    <p> <iframe width="300" height="200" src="https://www.youtube.com/embed/lU6f9qGusjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </p>
+  </div>
+
+  <div class="right">
+    <h3>To know another language is to live another life.</h3>
+    <p>-Chinese Proveb</p>
+    <button onclick="gentext();">generate New Quote</button>
+  </div>
+</div>
+</div>
+
+<div style="background-color: rgb(245, 203, 149);text-align:center;padding:10px;margin-top:7px;">© copyright Jennifer Martin 2021</div>
+
+</body>
+</html>
+
