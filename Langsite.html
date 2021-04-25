@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Tutorial for this page https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion-->
+<style>
+    h1 {
+    text-align: center;
+    font-family: Papyrus;
+    background-color: bisque;
+    border-radius: 20%;
+
+}
+p {
+    text-align: center;
+    font-family: Papyrus;
+}
+.accordion {
+  background-color: rgb(241, 178, 163);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 25px;
+  transition: 0.4s;
+  font-family: papyrus;
+}
+
+.active, .accordion:hover {
+  background-color: rgb(233, 144, 93); 
+}
+
+.panel {
+    text-align: center;
+  padding: 0 18px;
+  display: none;
+  background-color: rgb(247, 207, 192);
+  overflow: hidden;
+}
+
+img {
+    border: solid 4px black;
+    margin-top: 10px;
+ border-radius: 100%;
+ text-align: center;
+ 
+}
+</style>
+</head>
+<body>
+    <!--Add random images from this site to your webpage http://placeimg.com/-->
+
+<h1><img src="http://placeimg.com/100/100/nature" alt="Random Image"><br>
+    Choose a Language Learning Site</h1>
+
+<button class="accordion">Duolingo</button>
+<div class="panel">
+  <p>Duolingo is rated one of the best ways to learn English. It is a free website that works on your phone and computer. You can learn English as well as many other languages for free.
+      <br> <a href="https://www.duolingo.com/">Duolingo</a>
+  </p>
+</div>
+
+<button class="accordion">English Live</button>
+<div class="panel">
+  <p>English live requires a subscription. Although it cost to use, you will get live interactive lessons with professional instructors. The interaction increases fluency and is better for those wanting to learn English for the work place.</p>
+  <br> <a href="https://englishlive.ef.com/es-mx/">EF English Live</a>
+</div>
+
+<button class="accordion">Rosetta Stone</button>
+<div class="panel">
+  <p>Rosetta Stone has created language learning technology for over 25 years. While it does require a paid subscription, it has amazing features such as speech enabled technology to teach accurate pronunciation and lessons are self paced and based on the learners unique level.</p>
+  <br> <a href="https://www.rosettastone.com/ ">Rosetta Stone</a>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

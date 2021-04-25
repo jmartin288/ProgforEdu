@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Tutorial for this page https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion-->
+<style>
+h1 {
+    text-align: center;
+    font-family: Papyrus;
+    background-color: bisque;
+    border-radius: 20%;
+}
+h3 {
+    text-align: center;
+    font-family: Papyrus;
+}
+.accordion {
+  background-color: rgb(151, 224, 188);
+  color: rgb(65, 71, 69);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.active, .accordion:hover {
+  background-color: rgb(64, 168, 99); 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: rgba(241, 222, 204, 0.952);
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h1>GED Espanol<br><img src= "Lotus.jpg" width="70" height="50"/></h1>
+<h3>Escoje cual tema estudiar</h3>
+<button class="accordion">Artes de Lenguaje</button>
+<div class="panel">
+  <p>En consonancia con los estándares de preparación profesional y universitaria, la evaluación de Razonamiento a través de las artes del lenguaje (RLA) de GED®se enfoca en tres grupos esenciales de habilidades:<br>
+
+    -La capacidad de leer atentamente.<br>
+    -La capacidad de escribir claramente.<br>
+    -La capacidad de editar y comprender el uso del español estándar escrito en contexto.</p><br>
+    <ul>
+        <li> <a href= "https://www.youtube.com/watch?v=pmA5PxySyfk&list=PLAC0E60C7CE50AAAE&index=1">Escritura</a></li>
+        <li> <a href= "https://www.youtube.com/watch?v=gbmY2ZxXpf8&list=RDCMUCVmphD-POeoQZLGvBYB2u1A&start_radio=1&t=9">Idea Esencial y detalles</a></li>
+        <li> <a href= "https://gedpracticetest.net/quizzes/examen-de-artes-del-lenguaje-ged/">Examen Practica</a></li>
+    </ul>
+</div>
+
+<button class="accordion">Matematicas</button>
+<div class="panel">
+    <p>Esto es lo que necesita saber: <br>
+        Debe estar familiarizado con los conceptos matemáticos, las mediciones, las ecuaciones y la aplicación de los conceptos matemáticos para resolver problemas de la vida real.
+        No es necesario que memorice las fórmulas. Se le proporcionará una hoja de fórmulas en el centro de examen, así como también en la pantalla durante el examen.</p>
+        <ul>
+            <li> <a href= "https://www.spanishged365.com/matematicas/aritmetica/">Aritmetica</a></li>
+            <li> <a href= "https://www.spanishged365.com/examen-de-practica-algebra-2/">Alegbra</a></li>
+            <li> <a href= "https://www.youtube.com/watch?v=3Xx31fiTSHA/">Examen Practica</a></li>
+        </ul>
+    </div>
+  
+
+<button class="accordion">Ciencias</button>
+<div class="panel">
+    <p>Teniendo en cuenta estas prioridades, el examen de Ciencia de GED® cumple con los siguientes parámetros:<br>
+-Aproximadamente el 40 % del examen se enfoca en biología, alrededor del 40 % se enfoca en física y, 
+aproximadamente, el 20 % se enfoca en geología.<br>
+        -El examen incluye ejercicios que evalúan el análisis y la comprensión de textos, 
+        las habilidades para hacer inferencias y representar datos, y la resolución de problemas con contenido de ciencia.</p>
+        <ul>
+            <li> <a href= "https://www.spanishged365.com/ciencias/biologia/">Biologia</a></li>
+            <li> <a href= "https://www.spanishged365.com/ciencias/fisica/">Fisica</a></li>
+            <li> <a href= "https://www.spanishged365.com/ciencias/quimica/">Quimica</a></li>
+        </ul>
+    </div>
+  
+<button class="accordion">Estudios Sociales</button>
+<div class="panel">
+    <p>Esto es lo que necesita saber:<br>
+        -Deberá aplicar conceptos sobre estudios sociales, saber cómo leer gráficos y cuadros que presenten datos sobre estudios sociales y usar el razonamiento para interpretar información sobre estudios sociales.
+        <br>-El examen de estudios sociales no es un examen de memorización. Por ejemplo, no es necesario que memorice las capitales de los países o las fechas en que ocurrieron los eventos, pero si se le proporciona
+         información sobre un evento, podría tener que usarla para sacar conclusiones.
+                <ul>
+                    <li> <a href= "https://www.spanishged365.com/examen-de-practica-estudios-sociales/">Examen Practica</a></li>
+                    
+                </ul>
+  
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
